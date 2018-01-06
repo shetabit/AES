@@ -41,7 +41,7 @@ $encrypted = $aes->encrypt($plainText);
 
 echo "Encrypted : {$encrypted}<br />";
 
-$decrypted = $aes->decrypt($encrypted);
+$decrypted = $aes->decrypt($encrypted, true);
 
 echo "Decrypted : {$decrypted}<br />";
 ```
