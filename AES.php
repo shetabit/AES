@@ -40,12 +40,16 @@ class AES
      */
     public function encrypt($data)
     {
-        $iv = $this->iv ? $this->iv : random_bytes(openssl_cipher_iv_length($this->cipher));
+        if ($this->iv) {
+        	$iv = $this->iv;
+        } else {
+        	$iv = base64_encode(random_bytes(openssl_cipher_iv_length($this->cipher)));
+        }
 
         $encrypted = openssl_encrypt($data, $this->cipher, base64_decode($this->key), 0, base64_decode($iv));
 
         if ($this->iv == null) {
-            return $encrypted . ':' . base64_encode($iv);
+            return $encrypted . ':' . $iv;
         }
         return $encrypted;
     }
