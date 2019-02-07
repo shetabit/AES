@@ -20,7 +20,7 @@ class AES
     /**
      * AES constructor.
      *
-     * @param $key
+     * @param string $key
      * @param string $cipher
      * @param null|string $iv
      */
