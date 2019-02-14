@@ -1,4 +1,8 @@
 # AES
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/73cc51ddaf4d700cecd1/maintainability)](https://codeclimate.com/github/shetabit/AES/maintainability)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/shetabit/AES/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/shetabit/AES/?branch=master)
+
 Encrypt and Decrypt data with AES algorithm with PHP
 
 ## Feature
